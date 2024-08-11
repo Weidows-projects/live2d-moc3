@@ -1,18 +1,40 @@
 {
-  "name": "live2d-moc3",
-  "version": "1.0.0",
-  "main": "src/live2d.js",
-  "author": "Weidows <utsuko27@qq.com>",
-  "license": "MIT",
+  "name": "live2d-loader",
   "private": false,
+  "version": "1.0.0",
+  "author": "Weidows <utsuko27@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Weidows-projects/Live2dLoader.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "main": "./dist/counter.umd.cjs",
+  "module": "./dist/counter.js",
+  "types": "./index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/counter.js",
+    "require": "./dist/counter.umd.cjs"
+  },
   "scripts": {
-    "uglifyjs": "uglifyjs src/Live2dLoader.js -o dist/Live2dLoader.min.js"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest"
   },
   "devDependencies": {
-    "uglify-js": "^3.15.5"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vitest": "^1.5.0"
   },
   "dependencies": {
+    "is-mobile": "^4.0.0",
     "pixi-live2d-display": "^0.4.0",
-    "pixi.js": "6.5.2"
+    "pixi.js": "6.5.10",
+    "typescript-cookie": "^1.0.6"
   }
 }

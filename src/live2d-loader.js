@@ -1,13 +1,4 @@
-/*
- * @!: *********************************************************************
- * @Author: Weidows
- * @LastEditors: Weidows
- * @Date: 2023-02-04 20:29:50
- * @LastEditTime: 2023-02-10 00:46:44
- * @FilePath: \Blog-private\source\_posts\Web\JavaScript\Live2dLoader\src\Live2dLoader.js
- * @Description: live2d loader
- * @?: *********************************************************************
- */
+
 
 // Under two lines for dev to see functions, Comment before Commit.
 // import * as PIXI from "pixi.js";
@@ -15,74 +6,6 @@
 
 live2d = PIXI.live2d;
 class Live2dLoader {
-  constructor(models) {
-    console.log(
-      "%cLive2D using: https://github.com/Weidows-projects/Live2dLoader",
-      "color: #6aff00;background: #0c222e;"
-    );
-    let config = models[this.getLive2dIndex(models)];
-    if (!config.mobile && this.isMobile()) return;
-    this.load(config);
-  }
-
-  getLive2dIndex(models) {
-    function setCookie(cname, cvalue, exseconds) {
-      const d = new Date();
-      d.setTime(d.getTime() + exseconds * 1000);
-      let expires = "expires=" + d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
-
-    function getCookie(cname) {
-      let name = cname + "=";
-      let ca = document.cookie.split(";");
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == " ") {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-
-    let cookie = getCookie("live2d");
-    let index =
-      cookie != "" && cookie >= 0 && cookie < models.length
-        ? cookie
-        : Math.floor(Math.random() * models.length);
-    if (cookie != index) setCookie("live2d", index, 24 * 60 * 60);
-    return index;
-  }
-
-  isMobile() {
-    var WIN = window;
-    var LOC = WIN["location"];
-    var NA = WIN.navigator;
-    var UA = NA.userAgent.toLowerCase();
-
-    function test(needle) {
-      return needle.test(UA);
-    }
-    var IsAndroid = test(/android|htc/) || /linux/i.test(NA.platform + "");
-    var IsIPhone = !IsAndroid && test(/ipod|iphone/);
-    var IsWinPhone = test(/windows phone/);
-
-    var device = {
-      IsAndroid: IsAndroid,
-      IsIPhone: IsIPhone,
-      IsWinPhone: IsWinPhone,
-    };
-    var documentElement = WIN.document.documentElement;
-    for (var i in device) {
-      if (device[i]) {
-        documentElement.className += " " + i.replace("Is", "").toLowerCase();
-      }
-    }
-    return device.IsAndroid || device.IsIPhone || device.IsWinPhone;
-  }
 
   async load(config) {
     let canvas = document.createElement("canvas");
