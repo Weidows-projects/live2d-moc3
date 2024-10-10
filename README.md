@@ -48,7 +48,7 @@ top_img:
 
   ```html
   <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/combine/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js,npm/pixi.js@6.5.2/dist/browser/pixi.min.js,npm/pixi-live2d-display/dist/index.min.js,gh/Weidows-projects/Live2dLoader/dist/Live2dLoader.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/combine/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js,npm/pixi.js@6.5.2/dist/browser/pixi.min.js,npm/pixi-live2d-display/dist/index.min.js,gh/Weidows-projects/Live2dLoader/dist/Live2dLoader.min.js"></script>
   ```
 
 - 以及自定义的 js, 单个/多个模型都可以, 但只显示一个, 想要多个可以多 new 几个
@@ -61,7 +61,7 @@ top_img:
         height: 768,
         left: "0px",
         bottom: "0px",
-        role: "https://cdn.jsdelivr.net/gh/alg-wiki/AzurLaneL2DViewer@gh-pages/assets/bisimai_2/bisimai_2.model3.json",
+        role: "https://fastly.jsdelivr.net/gh/alg-wiki/AzurLaneL2DViewer@gh-pages/assets/bisimai_2/bisimai_2.model3.json",
         background: "",
         opacity: 1,
         mobile: false,
@@ -72,7 +72,7 @@ top_img:
         height: 600,
         right: "0px",
         bottom: "0px",
-        role: "https://cdn.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/shizuku/shizuku.model.json",
+        role: "https://fastly.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/shizuku/shizuku.model.json",
         background: "",
         opacity: 0.7,
       },
@@ -96,10 +96,10 @@ inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
     - <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
-    - <script src="https://cdn.jsdelivr.net/combine/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js,npm/pixi.js@6.5.2/dist/browser/pixi.min.js,npm/pixi-live2d-display/dist/index.min.js,gh/Weidows-projects/Live2dLoader/dist/Live2dLoader.min.js"></script>
+    - <script src="https://fastly.jsdelivr.net/combine/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js,npm/pixi.js@6.5.2/dist/browser/pixi.min.js,npm/pixi-live2d-display/dist/index.min.js,gh/Weidows-projects/Live2dLoader/dist/Live2dLoader.min.js"></script>
   bottom:
     # - <script src="xxxx"></script>
-    - <script>addEventListener("DOMContentLoaded",function(){let models=[{width:1280,height:768,left:"0px",bottom:"0px",role:"https://cdn.jsdelivr.net/gh/alg-wiki/AzurLaneL2DViewer@gh-pages/assets/bisimai_2/bisimai_2.model3.json",background:"",opacity:1,mobile:false,draggable:true,},{width:800,height:600,right:"0px",bottom:"0px",role:"https://cdn.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/shizuku/shizuku.model.json",background:"",opacity:0.7,},];new Live2dLoader(models)})</script>
+    - <script>addEventListener("DOMContentLoaded",function(){let models=[{width:1280,height:768,left:"0px",bottom:"0px",role:"https://fastly.jsdelivr.net/gh/alg-wiki/AzurLaneL2DViewer@gh-pages/assets/bisimai_2/bisimai_2.model3.json",background:"",opacity:1,mobile:false,draggable:true,},{width:800,height:600,right:"0px",bottom:"0px",role:"https://fastly.jsdelivr.net/gh/guansss/pixi-live2d-display/test/assets/shizuku/shizuku.model.json",background:"",opacity:0.7,},];new Live2dLoader(models)})</script>
 ```
 
 <a>![分割线](https://pan.weidows.tech/d/local/img/divider.png)</a>
@@ -179,7 +179,7 @@ Live2dLoader(config)
 
 <a name='cite_note-1' href='#cite_ref-1'>[1]</a>: https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js (license 规定不可再分发)
 
-<a name='cite_note-2' href='#cite_ref-2'>[2]</a>: live2dcubismcore_v2: https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js
+<a name='cite_note-2' href='#cite_ref-2'>[2]</a>: live2dcubismcore_v2: https://fastly.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js
 
 <a name='cite_note-3' href='#cite_ref-3'>[3]</a>: [再见 Z16，Hi Laffey！ || 陈 YF の博客(￣ ▽ ￣)&#34;](https://blog.cyfan.top/p/a12e0ab7.html)
 
